@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ঠিকানা - Community Rentals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#fffbeb',
+                100: '#fef3c7',
+                200: '#fde68a',
+                300: '#fcd34d',
+                400: '#fbbf24',
+                500: '#f59e0b', // Saffron Primary
+                600: '#d97706',
+                700: '#b45309',
+                800: '#92400e',
+                900: '#78350f',
+              },
+              surface: 'var(--color-surface)',
+              background: 'var(--color-background)',
+              card: 'var(--color-card)',
+              border: 'var(--color-border)',
+              text: {
+                primary: 'var(--color-text-primary)',
+                secondary: 'var(--color-text-secondary)',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        :root {
+            --color-background: #fdfcf8; /* Warm Paper */
+            --color-surface: #ffffff;
+            --color-card: #ffffff;
+            --color-border: #f3f2ed;
+            --color-text-primary: #0a0a0a;
+            --color-text-secondary: #71717a;
+            --nav-bg-rgb: 253, 252, 248;
+        }
+
+        .dark {
+            --color-background: #09090b;
+            --color-surface: #18181b;
+            --color-card: #18181b;
+            --color-border: #27272a;
+            --color-text-primary: #fafafa;
+            --color-text-secondary: #a1a1aa;
+            --nav-bg-rgb: 9, 9, 11;
+        }
+
+        .black-mode {
+            --color-background: #000000;
+            --color-surface: #000000;
+            --color-card: #000000;
+            --color-border: #141414;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #71717a;
+            --nav-bg-rgb: 0, 0, 0;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .glass-nav {
+            background: rgba(var(--nav-bg-rgb), 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+        }
+
+        .dark .premium-shadow, .black-mode .premium-shadow {
+            box-shadow: 0 20px 60px -15px rgba(0,0,0,0.7);
+        }
+
+        .accent-glow {
+            box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.3);
+        }
+
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+</head>
+<body class="overflow-hidden">
+    <div id="root"></div>
+</body>
+</html>

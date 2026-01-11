@@ -1,0 +1,8 @@
+{
+  "name": "ঠিকানা: Community House Rentals",
+  "description": "A neighborhood-centric mobile app for local house rentals, sublets, and community living with smart agreement generation and rent tracking.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
